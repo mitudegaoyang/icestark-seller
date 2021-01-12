@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Loading, Button } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import PageTitle from '@/components/PageTitle';
-import { useRouteMatch, useHistory } from 'ice';
+import { useRouteMatch, useHistory, history as historys } from 'ice';
 
 import styles from './index.module.scss';
 
@@ -83,7 +83,7 @@ const mockData = (id) => {
 
 export default function Detail() {
   const [isLoading, setLoading] = useState(false);
-  const [data, setData] = useState({});
+  const [data, setData]: any = useState({});
 
   let match: any = useRouteMatch({
     path: "/list/detail/:contractId",
@@ -117,8 +117,17 @@ export default function Detail() {
     function handleClick() {
       history.push('/list');
     }
+
+    function handleClickHistory() {
+      historys.push('/list');
+    }
+
     return (
-      <Button type="primary" onClick={handleClick}>返回</Button>
+      <>
+        <Button type="primary" onClick={handleClick}>useHistory返回</Button>
+        {' '}
+        <Button type="primary" onClick={handleClickHistory}>history返回</Button>
+      </>
     )
   }
 

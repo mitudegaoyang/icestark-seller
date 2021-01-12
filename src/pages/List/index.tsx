@@ -35,7 +35,7 @@ export default function List() {
   useEffect(() => {
     async function fetchData() {
       await setLoading(true);
-      const { data: resData } = await mockApi();
+      const { data: resData }: any = await mockApi();
       await setData(Array.isArray(resData) ? resData : []);
       await setLoading(false);
     }
