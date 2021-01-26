@@ -2,7 +2,7 @@ import { runApp, IAppConfig } from 'ice';
 
 const appConfig: IAppConfig = {
   app: {
-    rootId: 'ice-container',
+    rootId: 'stark-child-scaffold',
   },
   router: {
     type: 'browser',
