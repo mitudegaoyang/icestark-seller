@@ -1,11 +1,6 @@
 {
   "plugins": [
-    [
-      "build-plugin-icestark",
-      {
-        "umd": true
-      }
-    ],
+    "build-plugin-icestark",
     [
       "build-plugin-fusion",
       {
