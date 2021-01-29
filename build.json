@@ -1,6 +1,12 @@
 {
   "plugins": [
-    "build-plugin-icestark",
+    [
+      "build-plugin-icestark",
+      {
+        "umd": true,
+        "library": "microApp"
+      }
+    ],
     [
       "build-plugin-fusion",
       {
